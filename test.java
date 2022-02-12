@@ -4,7 +4,7 @@ public class test {
         Scanner input = new Scanner(System.in);
         while (true){
             double throttle = input.nextDouble();
-            double turn = input.nextDouble()1;
+            double turn = input.nextDouble();
             double LT;
             double RT;
             if (Math.signum(throttle) != 0) {
@@ -14,8 +14,8 @@ public class test {
                 LT = turn;
                 RT = -turn;
             }
-            System.out.println((throttle+LT)/2);
-            System.out.println((throttle+RT)/2);
+            System.out.println(Math.max(-1, Math.min(throttle + LT, 1)));
+            System.out.println(Math.max(-1, Math.min(throttle + RT, 1)));
     }
     }
 }

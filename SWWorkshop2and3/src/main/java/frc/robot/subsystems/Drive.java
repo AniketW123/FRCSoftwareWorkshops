@@ -29,8 +29,8 @@ public class Drive extends Subsystem {
             LT = -turn;
             RT = turn;
         }
-        LM.set(ControlMode.PercentOutput, (throttle+LT)/2);
-        RM.set(ControlMode.PercentOutput, (throttle+RT)/2);
+        LM.set(ControlMode.PercentOutput, Math.max(-1, Math.min(throttle + LT, 1)) );
+        RM.set(ControlMode.PercentOutput, Math.max(-1, Math.min(throttle + RT, 1)));
     }
     public void stop(){
         LM.set(ControlMode.PercentOutput, 0.0);
