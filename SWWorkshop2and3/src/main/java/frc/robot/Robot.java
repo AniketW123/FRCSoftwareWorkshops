@@ -25,7 +25,7 @@ public class Robot extends TimedRobot {
 
   private Joystick LJ = new Joystick(1);
   private Joystick RJ = new Joystick(1);
-  private Drive drive = new Drive();
+  private Drive mDrive = new Drive();
   /**
    * This function is run when the robot is first started up and should be used for any
    * initialization code.
@@ -81,19 +81,19 @@ public class Robot extends TimedRobot {
   /** This function is called once when teleop is enabled. */
   @Override
   public void teleopInit() {
-    drive.stop();
+    mDrive.stop();
   }
 
   /** This function is called periodically during operator control. */
   @Override
   public void teleopPeriodic() {
-    drive.setOpenLoop(LJ.getThrottle(),RJ.getTwist());
+    mDrive.setOpenLoop(LJ.getThrottle(),RJ.getTwist());
   }
 
   /** This function is called once when the robot is disabled. */
   @Override
   public void disabledInit() {
-    drive.stop();
+    mDrive.stop();
   }
 
   /** This function is called periodically when disabled. */
@@ -103,7 +103,7 @@ public class Robot extends TimedRobot {
   /** This function is called once when test mode is enabled. */
   @Override
   public void testInit() {
-    drive.stop();
+    mDrive.stop();
   }
 
   /** This function is called periodically during test mode. */
