@@ -1,9 +1,7 @@
 package frc.robot;
 
-import java.util.concurrent.TimeUnit;
-
 public class PIDF{
-    private double kP, kI, kD, kF, setpoint;
+    private double kP, kI, kD,  kF, setpoint;
     double previousError = 0;
     double previousTime = 0;
     double integral = 0;
