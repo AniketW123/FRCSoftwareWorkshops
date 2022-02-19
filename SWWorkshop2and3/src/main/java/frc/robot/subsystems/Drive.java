@@ -19,6 +19,7 @@ public class Drive extends Subsystem {
         RF.set(ControlMode.Follower, 3);
         RM.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Absolute, 0, 1000);
     }
+
     public void setOpenLoop(double throttle, double turn){
         double LT;
         double RT;

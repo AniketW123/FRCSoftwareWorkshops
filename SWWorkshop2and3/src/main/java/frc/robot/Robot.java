@@ -23,8 +23,8 @@ public class Robot extends TimedRobot {
   private final SendableChooser<String> m_chooser = new SendableChooser<>();
 
 
-  private Joystick LJ = new Joystick(1);
-  private Joystick RJ = new Joystick(1);
+  private Joystick LJ = new Joystick(Constants.kLJ);
+  private Joystick RJ = new Joystick(Constants.kRJ);
   private Drive mDrive = new Drive();
   /**
    * This function is run when the robot is first started up and should be used for any

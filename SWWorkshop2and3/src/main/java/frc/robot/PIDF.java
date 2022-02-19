@@ -1,7 +1,7 @@
 package frc.robot;
 
 public class PIDF{
-    private double kP, kI, kD,  kF, setpoint;
+    private double kP, kI, kD, kF, setpoint;
     double previousError = 0;
     double previousTime = 0;
     double integral = 0;
@@ -33,7 +33,7 @@ public class PIDF{
         error = setpoint - pos;
         integral += error * dt;
         double derivative = (error - previousError) / dt;
-        output = kP*error + kI*integral + kD*derivative;
+        output = kP*error + kI*integral + kD*derivative + kF*setpoint;
         previousError = error;
         previousTime = dt;
         return output;
