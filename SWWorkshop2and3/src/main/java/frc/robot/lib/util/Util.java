@@ -1,6 +1,5 @@
 package frc.robot.lib.util;
 
-
 import java.util.List;
 
 /**
